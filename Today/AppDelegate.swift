@@ -14,6 +14,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        UINavigationBar.appearance().tintColor = .todayPrimaryTint
+        //colors you’ll use in Today are defined in the asset catalog.
+        UINavigationBar.appearance().backgroundColor = .todayNavigationBackground
+        //Create a new UINavigationBarAppearance
+        let navBarAppearance = UINavigationBarAppearance()
+        navBarAppearance.configureWithOpaqueBackground()
+        //Make the new appearance the default scroll edge appearance.
+        UINavigationBar.appearance().scrollEdgeAppearance = navBarAppearance
         return true
     }
 
